@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+    back:
+        build: .
+        # container_name: back
+        restart: always
+        
+        ports:
+            - "3000:3000"
+            - "5432:5432"
+
+        stop_signal : SIGINT
+
+    # fron:
+    #     build: ./fron
+    #     container_name: fron
+    #     restart: always
+        
+    #     ports:
+    #         - "8080:81"
+    #     links:
+    #     - back
+    #     stop_signal : SIGINT
+
+
+# networks:
+#   frontend:
+#     # Specify driver options
+#     driver: bridge
+#     driver_opts:
+#       com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
+#   backend:
+#     # Use a custom driver
+#     driver: custom-driver
