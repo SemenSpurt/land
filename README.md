@@ -1,0 +1,2 @@
+# land
+Typical landing page
